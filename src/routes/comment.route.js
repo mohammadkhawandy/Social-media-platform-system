@@ -8,5 +8,6 @@ const verifyToken = require("../middlewares/verifyToken.middlewares");
 router.post("/", commentController.addOne);
 router.get("/:postId", commentController.getOne);
 router.delete("/:id", [verifyToken], [handleId], commentController.deleteOne);
+router.delete("/", commentController.deleteMany);
 
 module.exports = router;

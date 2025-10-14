@@ -1,13 +1,13 @@
 
-# 🧩 Social Media Platform API – Task 6
+#  Social Media Platform API 
 
-## 📌 Project Overview
+##  Project Overview
 
 This project is a simple and secure social media platform backend, built using **Node.js** and **Express.js**, with full support for user authentication and content management. The platform supports account creation, login/logout, post and comment management, and user profile operations.
 
 Authentication is handled using **JWT** and **Argon2** for password encryption.
 
-## 📁 Models
+##  Models
 
 The project includes three main models:
 
@@ -15,7 +15,7 @@ The project includes three main models:
 - **Post**: Handles user-generated posts.
 - **Comment**: Stores comments associated with posts.
 
-## 🔐 Authentication Endpoints
+##  Authentication Endpoints
 
 | Action         | URL              | Method |
 |----------------|------------------|--------|
@@ -23,7 +23,7 @@ The project includes three main models:
 | Login          | `/api/auth/login`  | POST   |
 | Logout         | `/api/auth/logout` | POST   |
 
-## 👤 User Endpoints
+##  User Endpoints
 
 All endpoints below require authentication via a JWT token.
 
@@ -33,9 +33,9 @@ All endpoints below require authentication via a JWT token.
 | Update Profile        | `/api/users/me`  | PUT    |
 | Delete Account        | `/api/users/me`  | DELETE |
 
-> ⚠️ Deleting a user will also delete all their posts, comments, and comments on their posts.
+>  Deleting a user will also delete all their posts, comments, and comments on their posts.
 
-## 📝 Post Endpoints
+##  Post Endpoints
 
 | Action                     | URL                    | Method |
 |----------------------------|------------------------|--------|
@@ -46,9 +46,9 @@ All endpoints below require authentication via a JWT token.
 | View All Posts (Paginated) | `/api/posts`           | GET    |
 | View Single Post           | `/api/posts/:id`       | GET    |
 
-> ⚠️ Deleting a post also deletes all its comments.
+>  Deleting a post also deletes all its comments.
 
-## 💬 Comment Endpoints
+##  Comment Endpoints
 
 | Action                  | URL                         | Method |
 |-------------------------|-----------------------------|--------|
@@ -56,6 +56,6 @@ All endpoints below require authentication via a JWT token.
 | View Comments on Post   | `/api/comments/:postId`     | GET    |
 | Delete Comment          | `/api/comments/:id`         | DELETE |
 
-> ⚠️ Only the original author can edit or delete their post/comment.
+>  Only the original author can edit or delete their post/comment.
 
 

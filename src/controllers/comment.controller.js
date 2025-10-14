@@ -110,5 +110,16 @@ class commentController {
       return res.status(500).json({ message: "error", message: error.message });
     }
   };
+
+  deleteMany = async (req, res) => {
+    try {
+      await Comment.deleteMany({});
+      return res.status(200).json({
+        message: "Comment deleted successfully",
+      });
+    } catch (error) {
+      return res.status(500).json({ message: "error", message: error.message });
+    }
+  };
 }
 module.exports = new commentController();
